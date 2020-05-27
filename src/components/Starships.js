@@ -16,8 +16,13 @@ class Starships extends Component{
                     </Link>
                     </button>
                 )
-                :null
+                :
+                <>
+                    <h1>Loading</h1>
+                </>
+                // null
             }
+           
 
             </>
         )

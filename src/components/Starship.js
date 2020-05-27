@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Starship_API from '../services/sw-api';
-
+import { Link } from 'react-router-dom';
 
 
 class Starship extends Component{
@@ -20,13 +20,21 @@ class Starship extends Component{
 
     render() {
         return(
+            
             this.state.starship ?
             <>
                 
                 <h2>{this.state.starship.name}</h2>
                 <h6>{this.state.starship.model}</h6>
+                <Link to='/'>
+                    Return  
+                </Link>
             </>
-            :null
+            :
+           
+            <>
+            <h1>Loading...</h1>
+            </>
         )
     }
 }
